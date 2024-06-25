@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class MenuUi : MonoBehaviour
 {
     public static MenuUi Instance;
@@ -15,6 +16,8 @@ public class MenuUi : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    
 
 
 }

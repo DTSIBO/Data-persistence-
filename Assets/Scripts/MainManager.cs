@@ -18,11 +18,14 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
-
     
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -72,8 +75,19 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
+        StartCoroutine(BackMenu());
         GameOverText.SetActive(true);
+        
+
     }
 
-   
+    IEnumerator BackMenu()
+	{
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(1);
+
+    }
+
+
+
 }
